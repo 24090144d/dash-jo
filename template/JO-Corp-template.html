@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Corporate Dashboard ({{CHAIN}})</title>
+</head>
+<body>
+  <div class="wrap">
+    <div class="header-row">
+      <div>
+        <h3 id="pageTitle">Corporate Dashboard ({{CHAIN}})</h3>
+        <div class="sub" id="pageSubtitle">FCS1 Job Order</div>
+      </div>
+      <div class="top" id="controls">
+        <label class="switch-group" id="switchLabel">Switch:
+          <select id="pageSwitch"></select>
+        </label>
+        <label class="lang-group" id="langLabel">Language:
+          <select id="langSelect"></select>
+        </label>
+        <button id="btnTheme">Toggle Dark/Light</button>
+        <button id="btnExportPdf" class="btn-export">Export (PDF)</button>
+      </div>
+    </div>
+
+    <section id="filterCard" class="filters-card">
+      <div class="filters-label" id="filtersLabel">Filters</div>
+      <div class="hotel-dropdown">
+        <button id="hotelBtn" class="chip">▼ All Hotels</button>
+        <div id="hotelPanel" class="hotel-panel"></div>
+      </div>
+      <label id="fromLabel">From:</label><input id="fromDate" type="date" class="chip">
+      <label id="toLabel">To:</label><input id="toDate" type="date" class="chip">
+      <button id="applyFilters" class="chip">Apply</button>
+      <button class="chip quick" data-days="1">1 day</button>
+      <button class="chip quick" data-days="7">1 week</button>
+      <button class="chip quick" data-days="14">2 weeks</button>
+      <button class="chip quick" data-days="30">1 month</button>
+      <button class="chip quick" data-days="90">3 months</button>
+      <button class="chip quick" data-days="180">6 months</button>
+      <button class="chip quick" data-days="365">1 year</button>
+      <button id="resetFilters" class="chip">Reset</button>
+    </section>
+
+    <div class="kpi-grid" id="kpis"></div>
+    <div class="section-title" id="execTitle">Executive Analytics</div>
+    <div class="chart-grid" id="featuredCharts"></div>
+    <div class="section-title" id="coreTitle">Core Dashboard Charts</div>
+    <div class="chart-grid" id="charts"></div>
+
+    <section id="topIncidents" class="table-wrap">
+      <h2 id="top20Title">Top 20 JO</h2>
+      <div id="top20"></div>
+    </section>
+
+    <section id="dictionary" class="info-wrap">
+      <h2 id="dictionaryTitle">KPI & Chart Dictionary</h2>
+      <div id="infoList"></div>
+    </section>
+
+    <section id="metaCard"></section>
+  </div>
+</body>
+</html>
